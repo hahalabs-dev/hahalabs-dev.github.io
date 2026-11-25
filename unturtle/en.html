@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Unturtle – Move to clear your Mac’s screen</title>
+<meta name="description" content="A Mac menu bar app that blurs your screen after you’ve been sitting a while and clears it when you move. The camera only checks that you moved; video is never saved. Free.">
+<link rel="canonical" href="https://hahalabs-dev.github.io/unturtle/en.html">
+<link rel="alternate" hreflang="ko" href="https://hahalabs-dev.github.io/unturtle/">
+<link rel="alternate" hreflang="en" href="https://hahalabs-dev.github.io/unturtle/en.html">
+<link rel="alternate" hreflang="ja" href="https://hahalabs-dev.github.io/unturtle/ja.html">
+<link rel="alternate" hreflang="x-default" href="https://hahalabs-dev.github.io/unturtle/en.html">
+<link rel="icon" type="image/png" href="img/icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="HaHa Labs">
+<meta property="og:title" content="Unturtle – Move to clear your Mac’s screen">
+<meta property="og:description" content="A Mac menu bar app that blurs your screen after you’ve been sitting a while and clears it when you move. The camera only checks that you moved; video is never saved. Free.">
+<meta property="og:url" content="https://hahalabs-dev.github.io/unturtle/en.html">
+<meta property="og:image" content="https://hahalabs-dev.github.io/unturtle/img/en-1.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Unturtle", "alternateName": "펴북이", "operatingSystem": "macOS 14 or later", "applicationCategory": "ProductivityApplication", "description": "A Mac menu bar app that blurs your screen after you’ve been sitting a while and clears it when you move. The camera only checks that you moved; video is never saved. Free.", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "author": {"@type": "Organization", "name": "HaHa Labs"}, "image": "https://hahalabs-dev.github.io/unturtle/img/icon.png", "url": "https://hahalabs-dev.github.io/unturtle/en.html"}</script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--green:#0EA47A;--deep:#0A5C45;--ink:#1d2a26;--soft:#5b6b66;--line:#e3ece8;--tint:#f1faf6}
+html{-webkit-text-size-adjust:100%}
+body{font-family:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Noto Sans KR","Hiragino Sans","Segoe UI",sans-serif;color:var(--ink);background:#fff;line-height:1.7;word-break:keep-all;overflow-wrap:anywhere}
+a{color:#0a7d5d}
+.wrap{max-width:1040px;margin:0 auto;padding:0 24px}
+.top{display:flex;justify-content:space-between;align-items:center;padding:20px 0;font-size:14px}
+.top .brand{font-weight:700;color:var(--deep);text-decoration:none;letter-spacing:.02em}
+.top .lang a{text-decoration:none;margin-left:14px;color:var(--soft)}
+.top .lang a[aria-current]{color:var(--deep);font-weight:600}
+.hero{background:linear-gradient(160deg,#F3FAF6,#CFE9DD);padding:8px 0 0}
+.hero .inner{text-align:center;padding:36px 0 44px}
+.hero img.icon{width:112px;height:112px;border-radius:25px;box-shadow:0 14px 34px #0a5c4533}
+.hero h1{font-size:44px;line-height:1.2;margin-top:20px;color:var(--deep);letter-spacing:-.02em}
+.hero .tag{font-size:24px;font-weight:600;margin-top:10px}
+.hero .lead{font-size:17px;color:var(--soft);max-width:640px;margin:14px auto 0}
+.badge{display:inline-block;margin-top:26px;padding:13px 26px;border-radius:999px;background:var(--deep);color:#fff;font-weight:600;font-size:16px;text-decoration:none}
+.badge.wait{background:#fff;color:var(--deep);border:1.5px solid #bfe3d5}
+.meta{font-size:13.5px;color:var(--soft);margin-top:12px}
+.shot{display:block;width:100%;height:auto;border-radius:16px;box-shadow:0 26px 70px #0a5c4530,0 0 0 1px #0000000d;background:#ddd}
+.hero .shot{max-width:920px;margin:0 auto -90px;position:relative}
+main{padding-top:150px}
+.intro{max-width:680px;margin:0 auto;padding:20px 0 28px;text-align:center}
+.intro h2{font-size:30px;color:var(--deep)}
+.intro p{margin-top:14px;font-size:17px;color:#33423d}
+.intro ul{list-style:none;margin-top:14px;color:var(--soft);font-size:16px}
+.intro li{margin-top:6px}
+.feature{display:grid;grid-template-columns:1fr 1fr;gap:52px;align-items:center;padding:52px 0}
+.feature:nth-of-type(odd) .text{order:2}
+.feature h2{font-size:30px;line-height:1.3;color:var(--deep);letter-spacing:-.01em}
+.feature p{margin-top:14px;color:#33423d;font-size:16.5px}
+.feature ul{margin:14px 0 0 1.1em;color:#33423d;font-size:16px}
+.feature li{margin-top:6px}
+.calm{background:var(--tint);border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin-top:40px;padding:56px 0}
+.calm h2,.plain h2{font-size:26px;color:var(--deep);margin-bottom:18px}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:20px 22px}
+.card h3{font-size:17px;margin-bottom:6px}
+.card p{font-size:15px;color:var(--soft)}
+.plain{padding:56px 0 8px}
+.faq h3{font-size:17.5px;margin-top:26px}
+.faq p{margin-top:6px;color:#33423d}
+.contact{background:var(--tint);border:1px solid #bfe3d5;border-radius:14px;padding:22px 24px;margin-top:8px}
+.links{list-style:none;margin-top:6px}
+.links li{margin-top:8px}
+footer{margin-top:64px;border-top:1px solid var(--line);padding:28px 0 44px;font-size:13.5px;color:var(--soft);text-align:center}
+@media (max-width:780px){
+ .hero h1{font-size:34px}.hero .tag{font-size:20px}
+ .hero .shot{margin-bottom:-50px}main{padding-top:90px}
+ .feature{grid-template-columns:1fr;gap:22px;padding:34px 0}
+ .feature:nth-of-type(odd) .text{order:0}
+ .feature h2{font-size:25px}
+ .cards{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+<header class="hero">
+  <div class="wrap">
+    <nav class="top">
+      <a class="brand" href="../">HaHa Labs</a>
+      <span class="lang"><a href="./" lang="ko">한국어</a><a href="en.html" aria-current="page" lang="en">English</a><a href="ja.html" lang="ja">日本語</a></span>
+    </nav>
+    <div class="inner">
+      <img class="icon" src="img/icon.png" width="112" height="112" alt="">
+      <h1>Unturtle</h1>
+      <p class="tag">Move to clear your screen</p>
+      <p class="lead">Sit too long and your Mac’s screen blurs for a moment. Move, and it clears.</p>
+      <!-- 출시되면 아래 한 줄을 App Store 링크로 바꾼다: <a class="badge" href="https://apps.apple.com/app/id6838509074">…</a> -->
+      <span class="badge wait">In review for the Mac App Store · Coming soon</span>
+      <p class="meta">macOS 14 or later · Free · No account</p>
+    </div>
+    <img class="shot" src="img/en-1.jpg" width="1600" height="1000" alt="Unturtle’s blurred screen with the turtle stretching its neck out">
+  </div>
+</header>
+<main>
+  <div class="wrap">
+      <section class="intro"><h2>The turtle is your body</h2><p>A turtle lives in your menu bar. When you sit down, it starts walking. The longer you sit, the slower it goes, until it pulls its head in. Then your screen blurs for a moment.</p><ul><li>Turn your head or roll your shoulders, the turtle stretches its neck back out, and the screen clears.</li><li>Every 30 or 60 minutes. You choose which.</li><li>You decide how long the movement takes, from 5 seconds to 3 minutes.</li></ul></section>
+      <section class="feature">
+        <div class="text"><h2>A heads-up before it blurs</h2><p>A small heads-up appears one minute before the screen blurs, so nothing cuts you off mid-thought.</p><ul><li>Start right away or snooze for 15 minutes.</li><li>It waits while you’re on a call. The screen doesn’t blur while your microphone is in use.</li><li>On a busy day, “Stop for Today” gives you the day off.</li></ul></div>
+        <img class="shot" src="img/en-3.jpg" width="1600" height="1000" loading="lazy" alt="The heads-up that appears one minute before the screen blurs">
+      </section>
+      <section class="feature">
+        <div class="text"><h2>See your day at a glance</h2><p>Click the turtle to see today as a single band.</p><ul><li>Time spent sitting shows as a soft tint.</li><li>Each time you moved leaves a turtle footprint.</li><li>Your history stays on this Mac.</li></ul></div>
+        <img class="shot" src="img/en-2.jpg" width="1600" height="1000" loading="lazy" alt="The menu bar panel showing today as a band with footprints">
+      </section>
+      <section class="feature">
+        <div class="text"><h2>It only checks that you moved</h2><p>The camera turns on only while the screen is blurred, and only to check that you moved.</p><ul><li>Video is never saved and never leaves this Mac.</li><li>Click the eye on the blurred screen to see what the app looks at, as outlines only.</li><li>Wearing AirPods? Unturtle can notice your head movement through them too.</li><li>You can use Unturtle without the camera. In that case you press a button and stretch.</li></ul></div>
+        <img class="shot" src="img/en-4.jpg" width="1600" height="1000" loading="lazy" alt="The view that shows what the camera sees as outlines only">
+      </section>
+      <section class="feature">
+        <div class="text"><h2>Pick your turtle’s color</h2><p>Choose the color of the turtle you see when the screen blurs and in the one-minute heads-up. You can use the same color in the menu bar too.</p></div>
+        <img class="shot" src="img/en-5.jpg" width="1600" height="1000" loading="lazy" alt="The settings window for picking the turtle’s color">
+      </section>
+  </div>
+  <section class="calm"><div class="wrap">
+    <h2>Quiet, and only on this Mac</h2>
+    <div class="cards"><div class="card"><h3>No account</h3><p>No sign-up and no sign-in. We never ask for your name or email.</p></div><div class="card"><h3>Nothing collected</h3><p>Your records and settings stay on this Mac. Nothing is sent to a server.</p></div><div class="card"><h3>No ads</h3><p>No ads and no analytics tools.</p></div></div>
+  </div></section>
+  <div class="wrap">
+    <section class="plain"><h2>Made for you if</h2><ul class="links"><li>You look up from work and hours have gone by</li><li>You dismiss break reminders without thinking</li><li>You’d take a quiet nudge over a nag</li></ul></section>
+    <section class="plain faq" id="faq"><h2>FAQ</h2><h3>The screen blurred and I’m in a hurry</h3><p>Click “Snooze 15 min”, or press and hold “Hold to Stop for Today” for two seconds. The blur is not a security lock.</p><h3>What does the camera see?</h3><p>It turns on only while the screen is blurred, to check that you moved. Video is never saved and never leaves your Mac. Click the eye at the bottom right of the blurred screen to see what the app looks at, as outlines only.</p><h3>Can I use it without the camera?</h3><p>Yes. Turn off “Check Movement with the Camera” in Settings → General. You then press a button and stretch.</p><h3>Is there an iPhone app?</h3><p>Features that work together with iPhone are on the way.</p></section>
+    <section class="plain" id="contact"><h2>Contact</h2>
+      <div class="contact"><p>Questions or problems? Email us. “Report a Problem…” in the app’s ⋯ menu fills in your app version for you.</p><p><strong><a href="mailto:hahalabs.dev@gmail.com">hahalabs.dev@gmail.com</a></strong></p></div>
+    </section>
+    <section class="plain"><h2>Documents</h2><ul class="links"><li><a href="privacy-en.html">Privacy Policy</a></li><li><a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">Terms of Use (Apple Standard EULA)</a></li></ul></section>
+  </div>
+</main>
+<footer><div class="wrap">Made by HaHa Labs · &copy; 2026 HaHa Labs</div></footer>
+</body>
+</html>

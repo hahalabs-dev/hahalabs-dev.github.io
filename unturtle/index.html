@@ -1,221 +1,133 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>펴북이 (Unturtle) 지원 - HaHa Labs</title>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap');
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Noto Sans KR', -apple-system, BlinkMacSystemFont, sans-serif;
-            background: #fafafa;
-            color: #1a1a1a;
-            line-height: 1.8;
-            -webkit-font-smoothing: antialiased;
-        }
-
-        .container {
-            max-width: 720px;
-            margin: 0 auto;
-            padding: 60px 24px 80px;
-        }
-
-        header {
-            margin-bottom: 48px;
-            padding-bottom: 32px;
-            border-bottom: 2px solid #111;
-        }
-
-        .company-name {
-            font-size: 13px;
-            font-weight: 500;
-            color: #666;
-            letter-spacing: 0.5px;
-            text-transform: uppercase;
-            margin-bottom: 12px;
-        }
-
-        h1 {
-            font-size: 28px;
-            font-weight: 700;
-            color: #111;
-            line-height: 1.3;
-            margin-bottom: 12px;
-        }
-
-        .last-updated {
-            font-size: 14px;
-            color: #888;
-        }
-
-        h2 {
-            font-size: 18px;
-            font-weight: 700;
-            color: #111;
-            margin-top: 40px;
-            margin-bottom: 16px;
-            padding-left: 12px;
-            border-left: 3px solid #0EA47A;
-        }
-
-        h3 {
-            font-size: 15px;
-            font-weight: 700;
-            color: #333;
-            margin-top: 24px;
-            margin-bottom: 10px;
-        }
-
-        p {
-            font-size: 15px;
-            color: #333;
-            margin-bottom: 12px;
-        }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 16px 0 24px;
-            font-size: 14px;
-        }
-
-        th, td {
-            border: 1px solid #ddd;
-            padding: 12px 14px;
-            text-align: left;
-            vertical-align: top;
-        }
-
-        th {
-            background: #f5f5f5;
-            font-weight: 600;
-            color: #333;
-            white-space: nowrap;
-        }
-
-        td {
-            color: #444;
-        }
-
-        ul {
-            margin: 8px 0 16px 20px;
-            font-size: 15px;
-            color: #333;
-        }
-
-        li {
-            margin-bottom: 6px;
-        }
-
-        .highlight-box {
-            background: #f1faf6;
-            border: 1px solid #bfe3d5;
-            border-radius: 8px;
-            padding: 16px 20px;
-            margin: 16px 0;
-            font-size: 14px;
-            color: #0a5c45;
-        }
-
-        .contact-box {
-            background: #f0f4f8;
-            border-radius: 8px;
-            padding: 24px;
-            margin: 24px 0;
-        }
-
-        .contact-box p {
-            font-size: 14px;
-            margin-bottom: 6px;
-            color: #444;
-        }
-
-        .contact-box strong {
-            color: #111;
-        }
-
-        footer {
-            margin-top: 60px;
-            padding-top: 24px;
-            border-top: 1px solid #e0e0e0;
-            text-align: center;
-        }
-
-        footer p {
-            font-size: 13px;
-            color: #999;
-        }
-
-        @media (max-width: 600px) {
-            .container {
-                padding: 40px 16px 60px;
-            }
-
-            h1 {
-                font-size: 24px;
-            }
-
-            h2 {
-                font-size: 16px;
-            }
-
-            table {
-                font-size: 13px;
-            }
-
-            th, td {
-                padding: 8px 10px;
-            }
-        }
-    
-        a { color: #0a7d5d; }
-        .links { list-style: none; margin-left: 0; }
-        .links li { margin-bottom: 10px; }
-        .lang { font-size: 14px; color: #888; margin-top: 8px; }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>펴북이 (Unturtle) – 움직이면 화면이 열리는 Mac 앱</title>
+<meta name="description" content="오래 앉아 있으면 화면이 잠깐 흐려지고, 몸을 움직이면 다시 열리는 Mac 메뉴바 앱. 카메라는 움직임만 확인하고 영상을 저장하지 않아요. 무료.">
+<link rel="canonical" href="https://hahalabs-dev.github.io/unturtle/">
+<link rel="alternate" hreflang="ko" href="https://hahalabs-dev.github.io/unturtle/">
+<link rel="alternate" hreflang="en" href="https://hahalabs-dev.github.io/unturtle/en.html">
+<link rel="alternate" hreflang="ja" href="https://hahalabs-dev.github.io/unturtle/ja.html">
+<link rel="alternate" hreflang="x-default" href="https://hahalabs-dev.github.io/unturtle/en.html">
+<link rel="icon" type="image/png" href="img/icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="HaHa Labs">
+<meta property="og:title" content="펴북이 (Unturtle) – 움직이면 화면이 열리는 Mac 앱">
+<meta property="og:description" content="오래 앉아 있으면 화면이 잠깐 흐려지고, 몸을 움직이면 다시 열리는 Mac 메뉴바 앱. 카메라는 움직임만 확인하고 영상을 저장하지 않아요. 무료.">
+<meta property="og:url" content="https://hahalabs-dev.github.io/unturtle/">
+<meta property="og:image" content="https://hahalabs-dev.github.io/unturtle/img/ko-1.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "펴북이", "alternateName": "Unturtle", "operatingSystem": "macOS 14 or later", "applicationCategory": "ProductivityApplication", "description": "오래 앉아 있으면 화면이 잠깐 흐려지고, 몸을 움직이면 다시 열리는 Mac 메뉴바 앱. 카메라는 움직임만 확인하고 영상을 저장하지 않아요. 무료.", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "author": {"@type": "Organization", "name": "HaHa Labs"}, "image": "https://hahalabs-dev.github.io/unturtle/img/icon.png", "url": "https://hahalabs-dev.github.io/unturtle/"}</script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--green:#0EA47A;--deep:#0A5C45;--ink:#1d2a26;--soft:#5b6b66;--line:#e3ece8;--tint:#f1faf6}
+html{-webkit-text-size-adjust:100%}
+body{font-family:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Noto Sans KR","Hiragino Sans","Segoe UI",sans-serif;color:var(--ink);background:#fff;line-height:1.7;word-break:keep-all;overflow-wrap:anywhere}
+a{color:#0a7d5d}
+.wrap{max-width:1040px;margin:0 auto;padding:0 24px}
+.top{display:flex;justify-content:space-between;align-items:center;padding:20px 0;font-size:14px}
+.top .brand{font-weight:700;color:var(--deep);text-decoration:none;letter-spacing:.02em}
+.top .lang a{text-decoration:none;margin-left:14px;color:var(--soft)}
+.top .lang a[aria-current]{color:var(--deep);font-weight:600}
+.hero{background:linear-gradient(160deg,#F3FAF6,#CFE9DD);padding:8px 0 0}
+.hero .inner{text-align:center;padding:36px 0 44px}
+.hero img.icon{width:112px;height:112px;border-radius:25px;box-shadow:0 14px 34px #0a5c4533}
+.hero h1{font-size:44px;line-height:1.2;margin-top:20px;color:var(--deep);letter-spacing:-.02em}
+.hero .tag{font-size:24px;font-weight:600;margin-top:10px}
+.hero .lead{font-size:17px;color:var(--soft);max-width:640px;margin:14px auto 0}
+.badge{display:inline-block;margin-top:26px;padding:13px 26px;border-radius:999px;background:var(--deep);color:#fff;font-weight:600;font-size:16px;text-decoration:none}
+.badge.wait{background:#fff;color:var(--deep);border:1.5px solid #bfe3d5}
+.meta{font-size:13.5px;color:var(--soft);margin-top:12px}
+.shot{display:block;width:100%;height:auto;border-radius:16px;box-shadow:0 26px 70px #0a5c4530,0 0 0 1px #0000000d;background:#ddd}
+.hero .shot{max-width:920px;margin:0 auto -90px;position:relative}
+main{padding-top:150px}
+.intro{max-width:680px;margin:0 auto;padding:20px 0 28px;text-align:center}
+.intro h2{font-size:30px;color:var(--deep)}
+.intro p{margin-top:14px;font-size:17px;color:#33423d}
+.intro ul{list-style:none;margin-top:14px;color:var(--soft);font-size:16px}
+.intro li{margin-top:6px}
+.feature{display:grid;grid-template-columns:1fr 1fr;gap:52px;align-items:center;padding:52px 0}
+.feature:nth-of-type(odd) .text{order:2}
+.feature h2{font-size:30px;line-height:1.3;color:var(--deep);letter-spacing:-.01em}
+.feature p{margin-top:14px;color:#33423d;font-size:16.5px}
+.feature ul{margin:14px 0 0 1.1em;color:#33423d;font-size:16px}
+.feature li{margin-top:6px}
+.calm{background:var(--tint);border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin-top:40px;padding:56px 0}
+.calm h2,.plain h2{font-size:26px;color:var(--deep);margin-bottom:18px}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:20px 22px}
+.card h3{font-size:17px;margin-bottom:6px}
+.card p{font-size:15px;color:var(--soft)}
+.plain{padding:56px 0 8px}
+.faq h3{font-size:17.5px;margin-top:26px}
+.faq p{margin-top:6px;color:#33423d}
+.contact{background:var(--tint);border:1px solid #bfe3d5;border-radius:14px;padding:22px 24px;margin-top:8px}
+.links{list-style:none;margin-top:6px}
+.links li{margin-top:8px}
+footer{margin-top:64px;border-top:1px solid var(--line);padding:28px 0 44px;font-size:13.5px;color:var(--soft);text-align:center}
+@media (max-width:780px){
+ .hero h1{font-size:34px}.hero .tag{font-size:20px}
+ .hero .shot{margin-bottom:-50px}main{padding-top:90px}
+ .feature{grid-template-columns:1fr;gap:22px;padding:34px 0}
+ .feature:nth-of-type(odd) .text{order:0}
+ .feature h2{font-size:25px}
+ .cards{grid-template-columns:1fr}
+}
+</style>
 </head>
 <body>
-    <div class="container">
-        <header>
-            <div class="company-name">HaHa Labs</div>
-            <h1>펴북이 · Unturtle</h1>
-            <p class="last-updated">지원 · Support</p>
-        </header>
-
-        <p>오래 앉아 있으면 화면이 잠깐 흐려지고, 몸을 움직이면 다시 열리는 맥 앱이에요.<br>Sit too long and your Mac’s screen blurs for a moment. Move, and it clears.</p>
-
-        <h2>문의 · Contact</h2>
-        <div class="contact-box">
-            <p>궁금한 점이나 문제가 있으면 메일로 알려주세요. 앱의 ⋯ 메뉴에 있는 "문제 보고"를 누르면 앱 버전이 함께 적혀요.</p>
-            <p>Questions or problems? Email us. “Report a Problem…” in the app’s ⋯ menu fills in your app version for you.</p>
-            <p><strong><a href="mailto:hahalabs.dev@gmail.com">hahalabs.dev@gmail.com</a></strong></p>
-        </div>
-
-        <h2>자주 묻는 것 · FAQ</h2>
-        <h3>화면이 흐려졌는데 급해요 · The screen blurred and I’m in a hurry</h3>
-        <p>흐려진 화면의 "15분 뒤에"를 누르거나, "오늘은 그만"을 2초 동안 누르고 있으면 돼요.<br>Click “Snooze 15 min”, or press and hold “Hold to Stop for Today” for two seconds.</p>
-        <h3>카메라가 무엇을 보나요 · What does the camera see?</h3>
-        <p>화면이 흐려진 동안에만 켜지고, 움직였는지만 확인해요. 영상은 저장하지 않고 Mac 밖으로 나가지 않아요. 흐려진 화면 오른쪽 아래의 눈 아이콘을 누르면 앱이 보는 것을 선으로 볼 수 있어요.<br>It turns on only while the screen is blurred, to check that you moved. Video is never saved and never leaves your Mac. Click the eye at the bottom right of the blurred screen to see what the app looks at, as outlines only.</p>
-        <h3>카메라 없이 쓸 수 있나요 · Can I use it without the camera?</h3>
-        <p>네. 설정 → 일반에서 "카메라로 움직임 확인하기"를 끄면 돼요. 그때는 버튼을 누르고 몸을 풀어요.<br>Yes. Turn off “Check Movement with the Camera” in Settings → General. You then press a button and stretch.</p>
-
-        <h2>문서 · Documents</h2>
-        <ul class="links">
-            <li><a href="privacy.html">개인정보 처리방침</a></li>
-            <li><a href="privacy-en.html">Privacy Policy (English)</a></li>
-            <li><a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">이용약관 · Terms of Use (Apple Standard EULA)</a></li>
-        </ul>
-
-        <footer>
-            <p>&copy; 2026 HaHa Labs. All rights reserved.</p>
-        </footer>
+<header class="hero">
+  <div class="wrap">
+    <nav class="top">
+      <a class="brand" href="../">HaHa Labs</a>
+      <span class="lang"><a href="./" aria-current="page" lang="ko">한국어</a><a href="en.html" lang="en">English</a><a href="ja.html" lang="ja">日本語</a></span>
+    </nav>
+    <div class="inner">
+      <img class="icon" src="img/icon.png" width="112" height="112" alt="">
+      <h1>펴북이</h1>
+      <p class="tag">움직이면 화면이 열려요</p>
+      <p class="lead">오래 앉아 있으면 화면이 잠깐 흐려지고, 몸을 움직이면 다시 열리는 Mac 앱이에요.</p>
+      <!-- 출시되면 아래 한 줄을 App Store 링크로 바꾼다: <a class="badge" href="https://apps.apple.com/app/id6838509074">…</a> -->
+      <span class="badge wait">Mac App Store 심사 중 · 곧 만나요</span>
+      <p class="meta">macOS 14 이상 · 무료 · 계정 없이 사용</p>
     </div>
+    <img class="shot" src="img/ko-1.jpg" width="1600" height="1000" alt="화면이 흐려지고 거북이가 목을 내미는 펴북이 화면">
+  </div>
+</header>
+<main>
+  <div class="wrap">
+      <section class="intro"><h2>거북이는 당신의 몸이에요</h2><p>메뉴바에 거북이 한 마리가 살아요. 자리에 앉으면 거북이도 걷기 시작하고, 오래 앉아 있을수록 걸음이 느려지다가 끝내 목을 움츠려요. 그러면 화면이 잠깐 흐려져요.</p><ul><li>고개를 돌리거나 어깨를 펴면 거북이가 목을 쭉 빼고, 화면이 다시 열려요.</li><li>30분이나 60분마다. 간격은 직접 골라요.</li><li>얼마나 움직일지도 5초부터 3분까지 정해요.</li></ul></section>
+      <section class="feature">
+        <div class="text"><h2>흐려지기 전에 먼저 알려줘요</h2><p>화면이 흐려지기 1분 전에 작은 알림이 먼저 떠요. 하던 일을 갑자기 끊지 않아요.</p><ul><li>바로 몸을 풀거나 15분 미룰 수 있어요.</li><li>통화나 회의 중에는 기다려요. 마이크를 쓰는 동안에는 흐려지지 않아요.</li><li>급한 날에는 “오늘은 그만”으로 하루를 쉬어요.</li></ul></div>
+        <img class="shot" src="img/ko-3.jpg" width="1600" height="1000" loading="lazy" alt="화면이 흐려지기 1분 전에 뜨는 알림">
+      </section>
+      <section class="feature">
+        <div class="text"><h2>하루가 띠 하나로 보여요</h2><p>메뉴바의 거북이를 누르면 오늘 하루가 띠 하나로 보여요.</p><ul><li>앉아 있던 시간은 연한 색으로 칠해져요.</li><li>몸을 푼 순간은 거북이 발자국으로 남아요.</li><li>기록은 이 Mac에만 쌓여요.</li></ul></div>
+        <img class="shot" src="img/ko-2.jpg" width="1600" height="1000" loading="lazy" alt="오늘 하루가 띠와 발자국으로 보이는 메뉴바 패널">
+      </section>
+      <section class="feature">
+        <div class="text"><h2>움직임만 확인해요</h2><p>카메라는 화면이 흐려진 동안에만 켜지고, 움직였는지만 확인해요.</p><ul><li>영상은 저장하지 않고, 이 Mac 밖으로 나가지 않아요.</li><li>흐려진 화면의 눈 아이콘을 누르면 앱이 보는 것을 선으로만 볼 수 있어요.</li><li>에어팟을 끼고 있으면 고개 움직임을 에어팟으로도 알아채요.</li><li>카메라 없이도 쓸 수 있어요. 그때는 버튼을 누르고 몸을 풀어요.</li></ul></div>
+        <img class="shot" src="img/ko-4.jpg" width="1600" height="1000" loading="lazy" alt="카메라가 보는 것을 선으로만 보여 주는 화면">
+      </section>
+      <section class="feature">
+        <div class="text"><h2>거북이 색을 골라요</h2><p>화면이 흐려질 때와 1분 전 알림에 보이는 거북이의 색을 고를 수 있어요. 메뉴바 거북이에도 같은 색을 쓸 수 있어요.</p></div>
+        <img class="shot" src="img/ko-5.jpg" width="1600" height="1000" loading="lazy" alt="거북이 색을 고르는 설정 창">
+      </section>
+  </div>
+  <section class="calm"><div class="wrap">
+    <h2>조용히, 이 Mac 안에서만</h2>
+    <div class="cards"><div class="card"><h3>계정이 없어요</h3><p>가입도 로그인도 없어요. 이름이나 이메일을 묻지 않아요.</p></div><div class="card"><h3>모으는 정보가 없어요</h3><p>기록과 설정은 이 Mac에만 있어요. 서버로 보내지 않아요.</p></div><div class="card"><h3>광고가 없어요</h3><p>광고도, 사용 행태를 분석하는 도구도 넣지 않았어요.</p></div></div>
+  </div></section>
+  <div class="wrap">
+    <section class="plain"><h2>이런 분께</h2><ul class="links"><li>일하다 보면 몇 시간이 훌쩍 지나 있는 분</li><li>쉬라는 알림은 끄고 넘기게 되는 분</li><li>잔소리보다 조용한 신호가 좋은 분</li></ul></section>
+    <section class="plain faq" id="faq"><h2>자주 묻는 것</h2><h3>화면이 흐려졌는데 급해요</h3><p>흐려진 화면의 “15분 뒤에”를 누르거나, “오늘은 그만”을 2초 동안 누르고 있으면 돼요. 화면이 흐려지는 것은 보안 잠금이 아니에요.</p><h3>카메라가 무엇을 보나요</h3><p>화면이 흐려진 동안에만 켜지고, 움직였는지만 확인해요. 영상은 저장하지 않고 Mac 밖으로 나가지 않아요. 흐려진 화면 오른쪽 아래의 눈 아이콘을 누르면 앱이 보는 것을 선으로 볼 수 있어요.</p><h3>카메라 없이 쓸 수 있나요</h3><p>네. 설정 → 일반에서 “카메라로 움직임 확인하기”를 끄면 돼요. 그때는 버튼을 누르고 몸을 풀어요.</p><h3>아이폰에서도 쓸 수 있나요</h3><p>아이폰과 이어 쓰는 기능은 준비 중이에요.</p></section>
+    <section class="plain" id="contact"><h2>문의</h2>
+      <div class="contact"><p>궁금한 점이나 문제가 있으면 메일로 알려주세요. 앱의 ⋯ 메뉴에 있는 “문제 보고”를 누르면 앱 버전이 함께 적혀요.</p><p><strong><a href="mailto:hahalabs.dev@gmail.com">hahalabs.dev@gmail.com</a></strong></p></div>
+    </section>
+    <section class="plain"><h2>문서</h2><ul class="links"><li><a href="privacy.html">개인정보 처리방침</a></li><li><a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">이용약관 (Apple 표준 사용권 계약)</a></li></ul></section>
+  </div>
+</main>
+<footer><div class="wrap">하하랩스가 만들었어요 · &copy; 2026 HaHa Labs</div></footer>
 </body>
 </html>
